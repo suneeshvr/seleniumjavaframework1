@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SuiteTestNg]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listeners.TestNgListeners"/>
+  </listeners>
+  <test thread-count="5" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="listeners.TestNgListenerDemo">
+        <methods>
+          <include name="test3"/>
+          <include name="test2"/>
+        </methods>
+      </class> <!-- listeners.TestNgListenerDemo -->
+      <class name="test.TestNG_demo">
+        <methods>
+          <include name="googleSearch"/>
+          <include name="tearDownTest"/>
+          <include name="setUpTest"/>
+        </methods>
+      </class> <!-- test.TestNG_demo -->
+      <class name="listeners.TestNgListenerDemo2">
+        <methods>
+          <include name="test6"/>
+        </methods>
+      </class> <!-- listeners.TestNgListenerDemo2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SuiteTestNg] -->

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SuiteTestNg">
+	<listeners>
+		<listener class-name="listeners.TestNgListeners"></listener>
+	</listeners>
+	<test thread-count="5" name="Test" parallel="classes">
+		<classes>
+			<class name="test.TestNG_demo" />
+			<class name="test.TestNgDemo1">
+				<methods>
+					<!-- <include name="myTest2"></include> -->
+					<exclude name="myTest3"></exclude>
+				</methods>
+			</class>
+			<class name="listeners.TestNgListenerDemo"></class>
+			<class name="listeners.TestNgListenerDemo2"></class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- SuiteTestNg -->
